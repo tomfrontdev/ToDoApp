@@ -10125,6 +10125,29 @@ readers do not read off random characters that represent icons */
   content: "\f63f";
 }
 
+/*!
+ * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2022 Fonticons, Inc.
+ */
+:root, :host {
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
+}
+
+.far,
+.fa-regular {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10132,13 +10155,22 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  background-color: green;
+  background-color: blue;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, blue, #e60041);
   height: 100vh;
   display: flex;
 }
 
 .app {
-  background-color: white;
+  background-color: #e2dddd;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: grey;
+  opacity: 1;
+  /* Firefox */
 }
 
 main {
@@ -10149,8 +10181,7 @@ main {
 
 .app__navigation {
   width: 100%;
-  height: 20%;
-  background-color: yellow;
+  height: 25%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -10161,6 +10192,11 @@ main {
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: blue;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, blue, #e60041);
+  border-radius: 0 0 15px 15px;
+  box-shadow: -1px 10px 25px -5px #42445a;
 }
 
 .app__div {
@@ -10176,16 +10212,27 @@ input {
   border: none;
   width: 100%;
   height: 100%;
+  padding: 10px;
+}
+
+.input__activity {
+  border-radius: 5px 25px 25px 5px;
+}
+
+.input__search {
+  border-radius: 5px;
 }
 
 .input__addBtn {
   position: absolute;
   right: 0;
-  width: 20px;
-  right: -6px;
+  width: 40px;
+  height: 100%;
   height: 100%;
   border-radius: 100%;
   border: none;
+  font-size: 30px;
+  font-weight: 0;
 }
 
 .app__tasks {
@@ -10198,24 +10245,25 @@ input {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 75%;
   margin: auto;
 }
 
 .app__line {
   height: 1px;
-  background-color: black;
   opacity: 0.5;
+  background-color: black;
+  width: 50%;
 }
 
 .app__task {
-  width: 100%;
-  background-color: red;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
   margin: 10px;
-  height: 20px;
+  border-radius: 5px;
 }
 
 .app__task.hidden {

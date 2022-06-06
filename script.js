@@ -43,8 +43,8 @@ renderTask = (task) => {
 	li.setAttribute("data-id", task.id);
 	li.setAttribute("class", "app__task");
 	li.innerHTML = `<p class="app__value">${task.text}</p>
-    	<button class="app__deleteicon">close</button>
-    	<button class="app__completeicon">ok</button>
+    	<i class="fa fa-trash app__deleteicon"></i>
+    	<i class="fa-regular fa-circle-check app__completeicon"></i>
     `;
 	if (!task.done) activeTasks.appendChild(li);
 	if (task.done) doneTasks.appendChild(li);

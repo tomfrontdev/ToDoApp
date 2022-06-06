@@ -1,6 +1,7 @@
 @import "../fontawesome-free-6.1.1-web/scss/fontawesome.scss";
 @import "../fontawesome-free-6.1.1-web/scss/solid.scss";
 @import "../fontawesome-free-6.1.1-web/scss/brands.scss";
+@import "../fontawesome-free-6.1.1-web/scss/regular.scss";
 
 * {
 	margin: 0;
@@ -9,13 +10,20 @@
 }
 
 body {
-	background-color: green;
+	background-color: blue; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to right, blue, rgb(230, 0, 65));
 	height: 100vh;
 	display: flex;
 }
 
 .app {
-	background-color: white;
+	background-color: rgb(226, 221, 221);
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: grey;
+	opacity: 1; /* Firefox */
 }
 
 main {
@@ -26,8 +34,7 @@ main {
 
 .app__navigation {
 	width: 100%;
-	height: 20%;
-	background-color: yellow;
+	height: 25%;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 }
@@ -38,6 +45,10 @@ main {
 	align-items: center;
 	width: 100%;
 	height: 100%;
+	background-color: blue; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to right, blue, rgb(230, 0, 65));
+	border-radius: 0 0 15px 15px;
+	box-shadow: -1px 10px 25px -5px rgba(66, 68, 90, 1);
 }
 
 .app__div {
@@ -53,16 +64,28 @@ input {
 	border: none;
 	width: 100%;
 	height: 100%;
+	padding: 10px;
+}
+
+.input__activity {
+	border-radius: 5px 25px 25px 5px;
+}
+
+.input__search {
+	border-radius: 5px;
 }
 
 .input__addBtn {
 	position: absolute;
+	// align-items: center;
 	right: 0;
-	width: 20px;
-	right: -6px;
+	width: 40px;
+	height: 100%;
 	height: 100%;
 	border-radius: 100%;
 	border: none;
+	font-size: 30px;
+	font-weight: 0;
 }
 
 .app__tasks {
@@ -75,24 +98,25 @@ input {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 50%;
+	width: 75%;
 	margin: auto;
 }
 
 .app__line {
 	height: 1px;
-	background-color: black;
 	opacity: 0.5;
+	background-color: black;
+	width: 50%;
 }
 
 .app__task {
-	width: 100%;
-	background-color: red;
-	border-radius: 10px;
 	display: flex;
 	justify-content: space-between;
+	background-color: white;
+	width: 100%;
+	padding: 10px;
 	margin: 10px;
-	height: 20px;
+	border-radius: 5px;
 }
 
 .app__task.hidden {
