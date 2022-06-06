@@ -1,0 +1,112 @@
+@import "../fontawesome-free-6.1.1-web/scss/fontawesome.scss";
+@import "../fontawesome-free-6.1.1-web/scss/solid.scss";
+@import "../fontawesome-free-6.1.1-web/scss/brands.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: green;
+	height: 100vh;
+	display: flex;
+}
+
+.app {
+	background-color: white;
+}
+
+main {
+	width: 40%;
+	height: 60%;
+	margin: auto;
+}
+
+.app__navigation {
+	width: 100%;
+	height: 20%;
+	background-color: yellow;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.app__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.app__div {
+	margin: auto;
+	width: 75%;
+}
+
+.app__div--activity {
+	position: relative;
+}
+
+input {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+.input__addBtn {
+	position: absolute;
+	right: 0;
+	width: 20px;
+	right: -6px;
+	height: 100%;
+	border-radius: 100%;
+	border: none;
+}
+
+.app__tasks {
+	width: 100%;
+	height: 80%;
+}
+
+.app__tasks > * {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 50%;
+	margin: auto;
+}
+
+.app__line {
+	height: 1px;
+	background-color: black;
+	opacity: 0.5;
+}
+
+.app__task {
+	width: 100%;
+	background-color: red;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+	height: 20px;
+}
+
+.app__task.hidden {
+	display: none;
+}
+
+.app__nothingtodotext.hidden {
+	display: none;
+}
+
+.app__completedtasktext.hidden {
+	display: none;
+}
+
+li {
+	list-style-type: none;
+}

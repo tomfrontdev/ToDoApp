@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+</head>
+	<body>
+		<main class="app">
+			<nav class="app__navigation">
+				<form class="app__form">					
+					<div class="app__div app__div--activity input">
+						<input type="text"
+						    placeholder="Enter an activity.."
+						    class="input__activity">
+                        </input>
+                        <button class="input__addBtn">+</button>
+                    </div>
+                    <div class="app__div app__div--search input">
+					    <input
+						    type="text"
+						    placeholder="search...."
+						    class="input__search">
+                        </input>
+                    </div>
+				</form>
+			</nav>
+            <section class="app__tasks">
+                <div class="app__activetasks">
+                    <p class="app__nothingtodotext"> You Have Nothing to do!</p>
+                </div>
+                <div class="app__line"></div>
+                <div class="app__completedtasks">
+                    <p class="app__completedtasktext"> You haven't completed any task yet!</p>
+                </div>
+            </section>
+		</main>
+        <script src="script.js"></script>
+	</body>
+</html>
