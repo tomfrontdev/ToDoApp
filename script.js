@@ -4,6 +4,7 @@ const activeTasks = document.querySelector(".app__activetasks");
 const doneTasks = document.querySelector(".app__completedtasks");
 const searchForm = document.querySelector(".input__search");
 const tasks = document.querySelector(".app__tasks");
+const app = document.querySelector(".app");
 
 let taskList = [];
 
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			renderTask(task);
 		});
 	}
+	clearText();
 });
 
 updateLocalstorage = () =>
@@ -37,9 +39,21 @@ addText = (text) => {
 	renderTask(task);
 };
 
+clearText = (event) => {
+	const activeText = document.querySelector(".app__activetext");
+	const doneText = document.querySelector(".app__donetext");
+
+	if (activeTasks.querySelector(".app__task"))
+		activeText.classList.add("hidden");
+	if (!activeTasks.querySelector(".app__task"))
+		activeText.classList.remove("hidden");
+	if (doneTasks.querySelector(".app__task")) doneText.classList.add("hidden");
+	if (!doneTasks.querySelector(".app__task"))
+		doneText.classList.remove("hidden");
+};
+
 renderTask = (task) => {
 	const li = document.createElement("li");
-	const item = document.querySelector(`[data-id="${task.id}"]`);
 	li.setAttribute("data-id", task.id);
 	li.setAttribute("class", "app__task");
 	li.innerHTML = `<p class="app__value">${task.text}</p>
@@ -105,5 +119,7 @@ tasks.addEventListener("click", (event) => {
 		}
 	}
 });
+
+app.addEventListener("click", (event) => clearText(event));
 
 searchForm.addEventListener("input", findTask);

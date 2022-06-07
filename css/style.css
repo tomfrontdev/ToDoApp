@@ -3,6 +3,7 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,400&display=swap");
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);
@@ -10160,10 +10161,7 @@ body {
   background-image: linear-gradient(to right, blue, #e60041);
   height: 100vh;
   display: flex;
-}
-
-.app {
-  background-color: #e2dddd;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 ::placeholder {
@@ -10174,14 +10172,14 @@ body {
 }
 
 main {
-  width: 40%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   margin: auto;
+  background-color: #ffffff;
 }
 
 .app__navigation {
   width: 100%;
-  height: 25%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -10189,18 +10187,17 @@ main {
 .app__form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   height: 100%;
   background-color: blue;
   /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, blue, #e60041);
   border-radius: 0 0 15px 15px;
-  box-shadow: -1px 10px 25px -5px #42445a;
+  box-shadow: 0px 0px 29px 4px #42445a;
 }
 
 .app__div {
-  margin: auto;
+  margin: 10px auto;
   width: 75%;
 }
 
@@ -10211,8 +10208,61 @@ main {
 input {
   border: none;
   width: 100%;
-  height: 100%;
+  height: 40px;
   padding: 10px;
+  font-size: 12px;
+  box-shadow: inset 0px 0px 17px -10px #040200;
+}
+
+.input__addBtn {
+  position: absolute;
+  align-items: center;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  border-radius: 100%;
+  border: none;
+  font-size: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.app__deleteicon {
+  color: red;
+}
+
+.app__value {
+  flex-grow: 4;
+}
+
+.app__completeicon {
+  color: green;
+  margin-left: 40px;
+}
+
+.app__deleteicon {
+  position: relative;
+}
+
+.app__deleteicon::after {
+  content: "";
+  width: 1px;
+  margin-left: 20px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+}
+
+.app__completeicon:hover,
+.app__deleteicon:hover {
+  opacity: 0.5;
+}
+
+.app__activetext,
+.app__donetext {
+  font-weight: 100;
 }
 
 .input__activity {
@@ -10223,21 +10273,11 @@ input {
   border-radius: 5px;
 }
 
-.input__addBtn {
-  position: absolute;
-  right: 0;
-  width: 40px;
-  height: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: none;
-  font-size: 30px;
-  font-weight: 0;
-}
-
 .app__tasks {
   width: 100%;
   height: 80%;
+  margin-top: 15px;
+  overflow: scroll;
 }
 
 .app__tasks > * {
@@ -10251,30 +10291,26 @@ input {
 
 .app__line {
   height: 1px;
-  opacity: 0.5;
+  opacity: 0.2;
   background-color: black;
-  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 60%;
 }
 
 .app__task {
   display: flex;
-  justify-content: space-between;
   background-color: white;
+  align-items: center;
   width: 100%;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
+  box-shadow: 0px 0px 17px -10px #040200;
+  font-weight: 400;
 }
 
 .app__task.hidden {
-  display: none;
-}
-
-.app__nothingtodotext.hidden {
-  display: none;
-}
-
-.app__completedtasktext.hidden {
   display: none;
 }
 
