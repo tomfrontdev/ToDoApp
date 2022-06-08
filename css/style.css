@@ -10189,7 +10189,7 @@ body {
   height: 100%;
   margin: 0;
   background-color: #0000ff;
-  background-image: linear-gradient(to right, #0000ff, #ff0000);
+  background-image: linear-gradient(to right, #ffffff, #ff0000);
   border-radius: 0 0 15px 15px;
   box-shadow: 0px 0px 29px 4px #42445a;
 }
@@ -10270,6 +10270,10 @@ body {
 .app .app__tasks .app__task .app__completeicon {
   color: #008000;
   margin-left: 40px;
+}
+
+.app .app__tasks .app__task .app__completedoneicon {
+  color: #008000;
 }
 
 .app .app__tasks .app__task .app__deleteicon {

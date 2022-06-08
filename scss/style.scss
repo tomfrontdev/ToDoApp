@@ -17,7 +17,7 @@
 			@include flex(column, 0);
 			@include dimensions(0);
 			background-color: $blue;
-			background-image: linear-gradient(to right, $blue, $red);
+			background-image: linear-gradient(to right, $white, $red);
 			border-radius: 0 0 15px 15px;
 			box-shadow: 0px 0px 29px 4px rgba(66, 68, 90, 1);
 			.app__div {
@@ -81,6 +81,9 @@
 			.app__completeicon {
 				color: $green;
 				margin-left: 40px;
+			}
+			.app__completedoneicon {
+				color: $green;
 			}
 			.app__deleteicon {
 				color: $red;

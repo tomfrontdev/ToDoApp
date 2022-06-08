@@ -52,15 +52,23 @@ clearText = (event) => {
 };
 
 renderTask = (task) => {
-	const li = document.createElement("li");
-	li.setAttribute("data-id", task.id);
-	li.setAttribute("class", "app__task");
-	li.innerHTML = `<p class="app__value">${task.text}</p>
+	const activeTask = document.createElement("li");
+	activeTask.setAttribute("data-id", task.id);
+	activeTask.setAttribute("class", "app__task");
+	activeTask.innerHTML = `<p class="app__value">${task.text}</p>
     	<i class="fa fa-trash app__deleteicon"></i>
     	<i class="fa-regular fa-circle-check app__completeicon"></i>
     `;
-	if (!task.done) activeTasks.appendChild(li);
-	if (task.done) doneTasks.appendChild(li);
+
+	const doneTask = document.createElement("li");
+	doneTask.setAttribute("data-id", task.id);
+	doneTask.setAttribute("class", "app__task");
+	doneTask.innerHTML = `<p class="app__value">${task.text}</p>
+    	<i class="fa-solid fa-circle-check app__completedoneicon"></i>
+    `;
+
+	if (!task.done) activeTasks.appendChild(activeTask);
+	if (task.done) doneTasks.appendChild(doneTask);
 };
 
 deleteTask = (key) => {
@@ -105,17 +113,16 @@ addTask.addEventListener("click", (event) => {
 tasks.addEventListener("click", (event) => {
 	const key = event.target.parentNode.dataset.id;
 
-	if (event.target.classList.contains("app__deleteicon")) {
+	if (
+		event.target.classList.contains("app__deleteicon") ||
+		event.target.classList.contains("app__completedoneicon")
+	) {
 		event.target.parentNode.remove();
 		deleteTask(key);
 	}
 	if (event.target.classList.contains("app__completeicon")) {
-		if (
-			!event.target.parentNode.classList.contains("app__completedtasks")
-		) {
-			event.target.parentNode.remove();
-			switchTask(key);
-		}
+		event.target.parentNode.remove();
+		switchTask(key);
 	}
 });
 
