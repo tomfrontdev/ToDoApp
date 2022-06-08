@@ -4,7 +4,6 @@
 @import "../fontawesome-free-6.1.1-web/scss/regular.scss";
 @import "./reset";
 
-
 ::placeholder {
 	/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: grey;
@@ -87,6 +86,9 @@
 			box-shadow: 0px 0px 17px -10px rgba(4, 2, 0, 1);
 			font-weight: $regular;
 			list-style-type: none;
+			p {
+				font-weight: $regular;
+			}
 			.app__value {
 				flex-grow: 4;
 			}
@@ -122,9 +124,4 @@
 .app__completeicon:hover,
 .app__deleteicon:hover {
 	opacity: 0.5;
-}
-
-.app__activetext,
-.app__donetext {
-	font-weight: $thin;
 }

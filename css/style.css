@@ -10267,6 +10267,10 @@ body {
   list-style-type: none;
 }
 
+.app .app__tasks .app__task p {
+  font-weight: 400;
+}
+
 .app .app__tasks .app__task .app__value {
   flex-grow: 4;
 }
@@ -10302,10 +10306,5 @@ body {
 .app__completeicon:hover,
 .app__deleteicon:hover {
   opacity: 0.5;
-}
-
-.app__activetext,
-.app__donetext {
-  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */
