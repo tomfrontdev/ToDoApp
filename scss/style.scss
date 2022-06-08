@@ -3,29 +3,21 @@
 @import "../fontawesome-free-6.1.1-web/scss/brands.scss";
 @import "../fontawesome-free-6.1.1-web/scss/regular.scss";
 @import "./reset";
-
-::placeholder {
-	/* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: grey;
-	opacity: 1; /* Firefox */
-}
+@import "./variables";
+@import "./mixins";
 
 .app {
-	width: 100%;
-	height: 100%;
-	margin: auto;
-	background-color: #ffffff;
+	@include dimensions(auto);
+	background-color: $white;
 	.app__navigation {
 		width: 100%;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
 		.app__form {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			height: 100%;
-			background-color: blue; /* For browsers that do not support gradients */
-			background-image: linear-gradient(to right, blue, rgb(230, 0, 65));
+			@include flex(column, 0);
+			@include dimensions(0);
+			background-color: $blue;
+			background-image: linear-gradient(to right, $blue, $red);
 			border-radius: 0 0 15px 15px;
 			box-shadow: 0px 0px 29px 4px rgba(66, 68, 90, 1);
 			.app__div {
@@ -63,10 +55,7 @@
 		margin-top: 15px;
 		overflow: scroll;
 		> * {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
+			@include flex(column, center);
 			width: 75%;
 			margin: auto;
 		}
@@ -74,9 +63,8 @@
 			font-weight: $thin;
 		}
 		.app__task {
-			display: flex;
-			background-color: white;
-			align-items: center;
+			@include flex(0, center);
+			background-color: $white;
 			width: 100%;
 			padding: 10px;
 			margin: 10px;
@@ -91,18 +79,18 @@
 				flex-grow: 4;
 			}
 			.app__completeicon {
-				color: green;
+				color: $green;
 				margin-left: 40px;
 			}
 			.app__deleteicon {
-				color: red;
+				color: $red;
 				position: relative;
 			}
 		}
 		.app__line {
 			height: 1px;
 			opacity: 0.2;
-			background-color: black;
+			background-color: $black;
 			margin-top: 20px;
 			margin-bottom: 20px;
 			width: 60%;
@@ -115,7 +103,7 @@
 	width: 1px;
 	margin-left: 20px;
 	height: 100%;
-	background-color: black;
+	background-color: $black;
 	position: absolute;
 }
 
@@ -126,4 +114,9 @@
 
 .fa-solid {
 	font-size: 15px;
+}
+
+::placeholder {
+	color: $grey;
+	opacity: 1;
 }

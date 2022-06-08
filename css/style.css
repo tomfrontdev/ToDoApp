@@ -10168,13 +10168,6 @@ body {
   display: none;
 }
 
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: grey;
-  opacity: 1;
-  /* Firefox */
-}
-
 .app {
   width: 100%;
   height: 100%;
@@ -10191,11 +10184,12 @@ body {
 .app .app__navigation .app__form {
   display: flex;
   flex-direction: column;
+  align-items: 0;
   width: 100%;
   height: 100%;
-  background-color: blue;
-  /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, blue, #e60041);
+  margin: 0;
+  background-color: #0000ff;
+  background-image: linear-gradient(to right, #0000ff, #ff0000);
   border-radius: 0 0 15px 15px;
   box-shadow: 0px 0px 29px 4px #42445a;
 }
@@ -10241,9 +10235,8 @@ body {
 
 .app .app__tasks > * {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   width: 75%;
   margin: auto;
 }
@@ -10254,8 +10247,9 @@ body {
 
 .app .app__tasks .app__task {
   display: flex;
-  background-color: white;
+  flex-direction: 0;
   align-items: center;
+  background-color: #ffffff;
   width: 100%;
   padding: 10px;
   margin: 10px;
@@ -10274,19 +10268,19 @@ body {
 }
 
 .app .app__tasks .app__task .app__completeicon {
-  color: green;
+  color: #008000;
   margin-left: 40px;
 }
 
 .app .app__tasks .app__task .app__deleteicon {
-  color: red;
+  color: #ff0000;
   position: relative;
 }
 
 .app .app__tasks .app__line {
   height: 1px;
   opacity: 0.2;
-  background-color: black;
+  background-color: #000000;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 60%;
@@ -10297,7 +10291,7 @@ body {
   width: 1px;
   margin-left: 20px;
   height: 100%;
-  background-color: black;
+  background-color: #000000;
   position: absolute;
 }
 
@@ -10308,5 +10302,10 @@ body {
 
 .fa-solid {
   font-size: 15px;
+}
+
+::placeholder {
+  color: #808080;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
