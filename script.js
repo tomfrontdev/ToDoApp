@@ -1,8 +1,8 @@
-const addTask = document.querySelector(".input__addBtn");
-const addInput = document.querySelector(".input__activity");
+const addTask = document.querySelector(".app__addBtn");
+const addInput = document.querySelector(".app__input--activity");
 const activeTasks = document.querySelector(".app__activetasks");
 const doneTasks = document.querySelector(".app__completedtasks");
-const searchForm = document.querySelector(".input__search");
+const searchForm = document.querySelector(".app__input--search");
 const tasks = document.querySelector(".app__tasks");
 const app = document.querySelector(".app");
 
@@ -42,14 +42,13 @@ addText = (text) => {
 clearText = (event) => {
 	const activeText = document.querySelector(".app__activetext");
 	const doneText = document.querySelector(".app__donetext");
+	const activeTask = activeTasks.querySelector(".app__task");
+	const doneTask = doneTasks.querySelector(".app__task");
 
-	if (activeTasks.querySelector(".app__task"))
-		activeText.classList.add("hidden");
-	if (!activeTasks.querySelector(".app__task"))
-		activeText.classList.remove("hidden");
-	if (doneTasks.querySelector(".app__task")) doneText.classList.add("hidden");
-	if (!doneTasks.querySelector(".app__task"))
-		doneText.classList.remove("hidden");
+	if (activeTask) activeText.classList.add("hidden");
+	if (!activeTask) activeText.classList.remove("hidden");
+	if (doneTask) doneText.classList.add("hidden");
+	if (!doneTask) doneText.classList.remove("hidden");
 };
 
 renderTask = (task) => {

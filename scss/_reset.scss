@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,400&display=swap");
+
+$roboto-flex: "Roboto Flex", sans-serif;
+$thin: 100;
+$regular: 400;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: blue; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to right, blue, rgb(230, 0, 65));
+	height: 100vh;
+	display: flex;
+	font-family: $roboto-flex;
+}
+
+.hidden {
+	display: none;
+}
