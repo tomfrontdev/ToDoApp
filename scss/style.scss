@@ -48,13 +48,11 @@
 				}
 				.app__addBtn {
 					position: absolute;
-					align-items: center;
 					right: 0;
 					width: 40px;
 					height: 40px;
 					border-radius: 100%;
 					border: none;
-					font-size: 30px;
 				}
 			}
 		}
@@ -124,4 +122,8 @@
 .app__completeicon:hover,
 .app__deleteicon:hover {
 	opacity: 0.5;
+}
+
+.fa-solid {
+	font-size: 15px;
 }

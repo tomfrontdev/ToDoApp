@@ -15,15 +15,15 @@
 
 ## style:
 
--   style muszą być pisane w plikach `*.scss`
--   musisz obowiązkowo skorzystać z metodologii BEM
+-   style muszą być pisane w plikach `*.scss` - zrobione
+-   musisz obowiązkowo skorzystać z metodologii BEM - zrobione
 -   musisz mieć plik gdzie będziesz trzymał wszystkie zmienne. Jak uznam, że chcę zmienić kolorystykę aplikacji to zmieniam to w jednym miejscu i wszedzie zmieni ten kolor
--   najechanie kursorem na kosz/ok przycisk sprawia że te elementy są jaśniejsze (na hover)
--   wystarczą tylko style na telefon, nie musisz robić RWD w tym przypadku, chyba że chcesz to zrób mobile first approach
+-   najechanie kursorem na kosz/ok przycisk sprawia że te elementy są jaśniejsze (na hover) - zrobione
+-   wystarczą tylko style na telefon, nie musisz robić RWD w tym przypadku, chyba że chcesz to zrób mobile first approach - zrobione
 -   zrób conajmniej jeden mixin w (dedykowanym do tego piku/folderze) np do centrowania elementów za pomocą display i użyj go wszedzie tam gdzie centrujesz coś flexem
--   belka z dodawaniem/search musi być zawsze NA WIERZCHU oraz zawsze NA GÓRZE ekranu - jak jest dużo elementów i scrollujesz na dół to belka cały czas jest w tym samym miejscu na górze i przysłania scrollowane elementy
--   użyj czcionki którą zaimportujesz z `google fonts` - niech to będzie czcionka `roboto`
--   ikonki kosza/ok/przycisku dodawania mogą pochodzić z `font awesome` lub ewentualnie innego podobnego rozwiązania (najlepiej `font awesome`)
+-   belka z dodawaniem/search musi być zawsze NA WIERZCHU oraz zawsze NA GÓRZE ekranu - jak jest dużo elementów i scrollujesz na dół to belka cały czas jest w tym samym miejscu na górze i przysłania scrollowane elementy - zrobione
+-   użyj czcionki którą zaimportujesz z `google fonts` - niech to będzie czcionka `roboto` - zrobione
+-   ikonki kosza/ok/przycisku dodawania mogą pochodzić z `font awesome` lub ewentualnie innego podobnego rozwiązania (najlepiej `font awesome`) - zrobione
 
 # ŹRÓDŁA WIEDZY:
 
